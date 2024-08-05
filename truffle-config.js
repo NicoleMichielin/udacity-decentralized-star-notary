@@ -28,6 +28,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config();
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -51,6 +54,17 @@ module.exports = {
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "4777",       // Any network (default: none)
     },
+    rinkeby: {
+      provider: () => new HDWalletProvider(
+        process.env.MNEMONIC,
+        `https://rinkeby.infura.io/v3/ceb60e68b3ae4f59a07a2d4d188e5fb4`
+      ),
+      network_id: 4,       // Rinkeby's id
+      gas: 5500000,        // Gas limit
+      confirmations: 2,    // Numero di conferme da attendere tra le distribuzioni
+      timeoutBlocks: 200,  // Numero di blocchi prima che una distribuzione scada
+      skipDryRun: true     // Salta il test run prima delle migrazioni
+    }
 
     // Another network with more advanced options...
     // advanced: {
