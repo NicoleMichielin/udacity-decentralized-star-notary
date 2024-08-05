@@ -54,16 +54,14 @@ module.exports = {
       port: 8545,            // Standard Ethereum port (default: none)
       network_id: "4777",       // Any network (default: none)
     },
-    rinkeby: {
-      provider: () => new HDWalletProvider(
-        process.env.MNEMONIC,
-        `https://rinkeby.infura.io/v3/ceb60e68b3ae4f59a07a2d4d188e5fb4`
-      ),
-      network_id: 4,       // Rinkeby's id
-      gas: 5500000,        // Gas limit
-      confirmations: 2,    // Numero di conferme da attendere tra le distribuzioni
-      timeoutBlocks: 200,  // Numero di blocchi prima che una distribuzione scada
-      skipDryRun: true     // Salta il test run prima delle migrazioni
+
+    sepolia: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://sepolia.infura.io/v3/f4c83644ae044a20bc2a56927e675663`),
+      network_id: 11155111,  // Sepolia's id
+      gas: 5500000,         // Gas limit
+      confirmations: 2,     // # of confirmations to wait between deployments
+      timeoutBlocks: 200,   // # of blocks before a deployment times out
+      skipDryRun: true      // Skip dry run before migrations
     }
 
     // Another network with more advanced options...
