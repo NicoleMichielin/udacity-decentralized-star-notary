@@ -17,8 +17,9 @@ StarNotary Token
 ### Your ERC-721 Token Symbol
 SNT
 
-### Your ERC-721 Token Symbol
-https://etherscan.io/address 0x9aa7a16365364cfe94bd3a892aa3eb7c1efa77e0
+### Token addess
+0x9aa7a16365364cfe94bd3a892aa3eb7c1efa77e0
+https://etherscan.io/address/0x9aa7a16365364cfe94bd3a892aa3eb7c1efa77e0
 
 ### Dependencies
 For this project, you will need to have:
