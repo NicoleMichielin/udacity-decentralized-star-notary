@@ -60,8 +60,10 @@ module.exports = {
       network_id: 11155111,  // Sepolia's id
       gas: 5500000,         // Gas limit
       confirmations: 2,     // # of confirmations to wait between deployments
-      timeoutBlocks: 200,   // # of blocks before a deployment times out
-      skipDryRun: true      // Skip dry run before migrations
+      timeoutBlocks: 500,   // # of blocks before a deployment times out
+      skipDryRun: true,      // Skip dry run before migrations
+      deploymentPollingInterval: 1500,
+      networkCheckTimeout: 1000000
     }
 
     // Another network with more advanced options...
